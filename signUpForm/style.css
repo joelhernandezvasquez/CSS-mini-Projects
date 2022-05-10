@@ -1,0 +1,219 @@
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+:root{
+    --clr_light_blue:#255996;
+    --clr_pure_white:#fff;
+    --clr_dark_blue: #1b3049;
+    --clr_pure_black: #171f29;
+    --clr_light_green: #1fd030;
+
+    --fs-1: 1.125rem;
+    --fs-2: 1.25rem;
+    --fs-3: 2rem;
+    --fs-small: .75rem;
+
+    --fw-1: 300;
+    --fw-2: 700;
+    --fw-3: 900;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/steam-bg.jpg);
+    background-size: cover;
+    background-color:var(--clr_pure_black);
+    background-blend-mode: multiply;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+   
+}
+
+a{
+    color:var(--clr_pure_white);
+
+   
+}
+ a:hover{
+    color:rgba(255, 255, 255, 0.8)
+}
+.steam_form_container{
+  
+    width:960px;
+    display:grid;
+    grid-template-columns: 350px minmax(500px,1fr) 40px; 
+
+    /* grid-template-rows: repeat(3,300px); */
+}
+
+.steam_front{
+    background-color:var(--clr_light_blue);
+    padding:48px;
+
+}
+
+.logo_container{
+   
+    width:162px;
+    height:50px;
+}
+
+.main_heading{
+    color:var(--clr_pure_white);
+    font-size:var(--fs-3);
+    text-transform: uppercase;
+    font-weight: var(--fw-3);
+    margin:21px 0;
+}
+.lead_title{
+    color:var(--clr_pure_white);
+    font-size: var(--fs-2);
+    line-height:1.5;
+    margin-bottom: 5px;
+    font-weight: var(--fw-1);
+    
+
+}
+
+.strong{
+    font-weight: var(--fw-3);
+    color:#CED8E4;
+    font-size: var(--fs-1);
+}
+
+.main_form{
+    margin-top:24px;
+}
+
+.form_control{
+    display:flex;
+    flex-direction: column;
+    margin:16px 0;
+}
+
+.form_label{
+    text-transform: capitalize;
+    font-size:var(--fs-2);
+    color:var(--clr_pure_white);
+}
+.form_input{
+    /* background:var(--clr_dark_blue); */
+    all:unset;
+    background-color: #193D66;
+    border:none;
+    padding:10.8px;
+    color:var(--clr_pure_white);
+    font-size:var(--fs-1);
+    font-weight: var(--fw-1);
+    margin-top:8px;
+}
+
+
+.label_Faq_container{
+    display: flex;
+    align-items: center;
+}
+
+.question_mark_container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:#193D66;
+    color:var(--clr_pure_white);
+    font-weight: var(--fw-1);
+    margin-left:12px;
+    cursor: pointer;
+    position:relative;
+}
+
+
+
+
+.question_mark_container span::after{
+   content:attr(data-tooltip);
+   position:absolute;
+   top:-35px;
+   left:24px;
+   width:200px;
+   background:rgba(0,0,0,0.4);
+   font-size:0.8rem;
+   padding:5px;
+   display:none;
+
+}
+.question_mark_container span:hover::after{
+    display:block;
+}
+
+.checkbox_container{
+    display:flex;
+    align-items: center;
+    font-size: var(--fs-small);
+}
+.checkbox_container label{
+    align-self: flex-end;
+    margin-left:10px;
+    color:var(--clr_pure_white);
+    font-weight: var(--fw-2);
+    font-size: 0.875rem;
+}
+
+
+.recaptcha{
+    display: block;
+    margin:20px 0 40px 0;
+}
+
+input[type=submit]{
+    background:var(--clr_light_green);
+    border:none;
+    padding:12px 24px;
+    cursor:pointer;
+    font-size: var(--fs-1);
+    color:var(--clr_pure_black);
+    font-weight: var(--fw-3);
+    transition:transform 300ms ease-in-out;
+    margin-right: 48px;
+}
+
+input[type=submit]:hover{
+    transform: scale(1.1);
+   
+}
+
+    
+
+
+
+.left_col{
+    background:var(--clr_dark_blue);
+    
+  align-self: center;
+  color:var(--clr_pure_white);
+  padding:40px 40px 50px 40px;
+   
+   
+}
+.left_col p{
+    margin:20px 0;
+    font-size:var(--fs-1);
+    font-weight: var(--fw-1);
+ 
+}
+.right_col{
+  background:var(--clr_dark_blue);
+  height:536px;
+    
+  align-self: center;
+}
